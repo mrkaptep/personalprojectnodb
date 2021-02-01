@@ -1,38 +1,252 @@
-.App {
+/* .main {
+  background-image: url("https://img.freepik.com/free-photo/brick-wall-texture-gray-brick-with-white-filling_158595-6434.jpg?size=626&ext=jpg&ga=GA1.2.280338041.1610064000");
+
+} */
+.headerBox {
+  display: inline-flex;
+  width: 440px;
+  background-color: #D55172;
+  font-family: 'Original Surfer', cursive;
+  font-size: 38px;
+  border-color: #D55172;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.header {
+  width: 390px;
+  font-family: 'Original Surfer', cursive;
+  font-size: 44px;
   text-align: center;
+  color: white;
+  padding: 2px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.headerBox button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  border: none;
+  margin-left: 5px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.weekBox {
+  width: 440px;
+  height: auto;
+  border-color: #51c2d5;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 15px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weekTitle {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  width: 438px;
+  height: auto;
+  background-color: #51c2d5;
+  border-color: #51c2d5;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 3px 3px 0 0;
+  color: white;
+  text-align: center;
+  padding-bottom: 4px;
+
+}
+
+.weeklyChore {
+  width: 420px;
+  height: 26px;
+  display: flex;
+  border-bottom: 3px dotted black;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.weekChoreBox {
+  margin: 8px 0 8px 5px;
+}
+
+.weeklyChore div {
+  height: 26px;
+  padding-left: 4px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 22px;
+}
+
+.weeklyChore button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  margin-left: 5px;
+  color: #51c2d5;
+}
+
+.assignName {
+  margin-left: 8px;
+  margin-right: 4px;
+  width: auto;
+
+}
+
+.choreName {
+  width: 250px;
+
+}
+
+.satBox {
+  width: 440px;
+  height: auto;
+  margin-top: 20px;
+  border-color: #D551D3;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 15px;
+
+}
+
+.satTitle {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  width: 438px;
+  height: auto;
+  background-color: #D551D3;
+  border-color: #D551D3;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 3px 3px 0 0;
+  color: white;
+  text-align: center;
+  padding-bottom: 4px;
+
+}
+
+.satChoreBox {
+  margin: 8px 0 8px 5px;
+}
+
+.saturdayChore {
+  width: 420px;
+  height: 26px;
+  display: flex;
+  border-bottom: 3px dotted black;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.saturdayChore div {
+  height: 26px;
+  padding-left: 4px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 22px;
+}
+
+.saturdayChore button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  margin-left: 5px;
+  color: #D551D3;
+}
+
+.moneyBox {
+  width: 440px;
+  height: auto;
+  margin-top: 20px;
+  border-color: #7AD551;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 15px;
+
+}
+
+.moneyTitle {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  width: 438px;
+  height: auto;
+  background-color: #7AD551;
+  border-color: #7AD551;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 3px 3px 0 0;
+  color: white;
+  text-align: center;
+  padding-bottom: 4px;
+
+}
+
+.moneyChoreBox {
+  margin: 8px 0 8px 5px;
+}
+
+.moneyChore {
+  width: 420px;
+  height: 26px;
+  display: flex;
+  border-bottom: 3px dotted black;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.moneyChore div {
+  height: 26px;
+  padding-left: 4px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 22px;
+}
+
+.moneyChore button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  margin-left: 5px;
+  color: #7AD551;
+}
+
+.editForm {
+  font-size: 22px;
+  font-family: helvetica;
+  margin-left: 5px;
+}
+
+.editForm input[type=text] {
+  border: 2px solid #D55172;
+  border-radius: 4px;
+}
+
+.editForm select {
+  border: 2px solid #D55172;
+  border-radius: 4px;
+  color: gray;
+}
+
+.inputForm {
+  margin: 5px;
+  padding: 2px;
+}
+
+.editForm button {
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #D55172;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 4px;
+  margin-left: 5px;
+  color: white;
+  margin: 4px;
+  padding: 4px;
 }
