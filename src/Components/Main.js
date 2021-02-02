@@ -57,6 +57,7 @@ class Main extends Component{
 
        }).catch(err => console.log(err))
    }
+
  
    cancel = ()=> {
         this.setState({
@@ -69,13 +70,15 @@ class Main extends Component{
         })
     }
     
-    deleteChore = (chore) => {
+    deleteChore = (chore, event) => {
+        event.preventDefault();
         axios.delete(`/api/chores/${chore.id}`)
         .then( res => {
             let index = this.state.chores.findIndex(thisChore => thisChore.id === chore.id);
                 this.state.chores.splice(index,1)
             this.setState({
-                chores: this.state.chores
+                chores: this.state.chores,
+                editChore: null
             })
         }).catch(err => console.log(err))
     }
@@ -96,20 +99,25 @@ class Main extends Component{
                       editChoreForm={this.editChoreForm} 
                       updateChore={this.updateChore}
                       cancel={this.cancel}
+                      deleteChore={this.deleteChore}
                     />
                     ):(
                     <React.Fragment>
                         <WeeklyChores choreWeek={this.state.chores} 
                                       editChoreForm={this.editChoreForm}
                                       deleteChore={this.deleteChore}
+                                      completeChore={this.completeChore}
+                                      updateChore={this.updateChore}
                     />
                         <SaturdayChores choreSaturday={this.state.chores}
                                         editChoreForm={this.editChoreForm}
                                         deleteChore={this.deleteChore}
+                                        updateChore={this.updateChore}
                     />
                         <MoneyChores choreMoney={this.state.chores}
                                      editChoreForm={this.editChoreForm}
                                      deleteChore={this.deleteChore}
+                                     updateChore={this.updateChore}
                         />
                     </React.Fragment>
                 )}

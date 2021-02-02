@@ -1,7 +1,17 @@
-/* .main {
-  background-image: url("https://img.freepik.com/free-photo/brick-wall-texture-gray-brick-with-white-filling_158595-6434.jpg?size=626&ext=jpg&ga=GA1.2.280338041.1610064000");
+body {
+  width: 100vw;
+  height: 100vh;
+  /* background-image: url("https://img.freepik.com/free-photo/brick-wall-texture-gray-brick-with-white-filling_158595-6434.jpg?size=626&ext=jpg&ga=GA1.2.280338041.1610064000");
+  background-size: cover; */
+  display: flex;
+  justify-content: center;
+}
 
-} */
+
+.completeBox {
+  width: 10px;
+}
+
 .headerBox {
   display: inline-flex;
   width: 446px;
@@ -35,12 +45,15 @@
 
 .contentContainer {
   margin: 20px;
+
 }
+
 
 .weekBox {
   width: 440px;
   height: auto;
   border-color: #51c2d5;
+  background-color: white;
   border-style: solid;
   border-width: 5px;
   border-radius: 15px;
@@ -101,14 +114,30 @@
 }
 
 .choreName {
-  width: 250px;
+  width: 300px;
 
 }
+
+.completedChore1 {
+  text-decoration: line-through;
+  text-decoration-color: #51c2d5;
+  text-decoration-thickness: 5px;
+  width: 300px;
+}
+
+.completedChore2 {
+  text-decoration: line-through;
+  text-decoration-color: #D551D3;
+  text-decoration-thickness: 5px;
+  width: 300px;
+}
+
 
 .satBox {
   width: 440px;
   height: auto;
   margin-top: 20px;
+  background-color: white;
   border-color: #D551D3;
   border-style: solid;
   border-width: 5px;
@@ -147,7 +176,6 @@
 }
 
 .saturdayChore div {
-  height: 26px;
   padding-left: 4px;
   display: inline-flex;
   align-items: center;
@@ -166,6 +194,7 @@
   width: 440px;
   height: auto;
   margin-top: 20px;
+  background-color: white;
   border-color: #7AD551;
   border-style: solid;
   border-width: 5px;
@@ -252,4 +281,30 @@
   color: white;
   margin: 4px;
   padding: 4px 8px 4px 8px;
+}
+
+.assignName2 {
+  margin-left: 8px;
+  margin-right: 4px;
+  width: auto;
+
+}
+
+.choreName2 {
+  width: 266px;
+  margin-right: 4px;
+
+}
+
+.choreAmount {
+  justify-content: center;
+  width: 20px;
+  margin-right: 8px;
+}
+
+.completedChore3 {
+  text-decoration: line-through;
+  text-decoration-color: #7AD551;
+  text-decoration-thickness: 5px;
+  width: 270px;
 }

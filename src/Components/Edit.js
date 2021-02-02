@@ -18,14 +18,15 @@ class Edit extends Component {
     // the && makes this code run only if the edit chore exist or was invoked
     // the ? is used so make sure the parent exist. This is called optional chaining
 
-    componentDidUpdate = (prevProps) => {
-        // need to compare this.prop.chore to nextProps.chore instead of this.props to nextProps
-        if(prevProps.editChore !== this.props.editChore && this.props.editChore){
-            this.setState ({
-                chore: {...this.props.editChore}
-            })
-        }
-    }
+    // componentDidUpdate = (prevProps) => {
+    //     // need to compare this.prop.chore to nextProps.chore instead of this.props to nextProps
+    //     if(prevProps.editChore !== this.props.editChore && this.props.editChore){
+    //         this.setState ({
+    //             chore: {...this.props.editChore}
+    //         })
+    //     }
+    // }
+
     // we need to do componentDidMount because we are swtitching between the components and we are just initializing
     componentDidMount = (prevProps) => {
         // need to compare this.prop.chore to nextProps.chore instead of this.props to nextProps
@@ -107,6 +108,10 @@ class Edit extends Component {
                 className="cancelButton">
                 <i class="fas fa-times"></i>
             </button>
+            <button 
+            type="button"
+            onClick={(event) => this.props.deleteChore(this.state.chore, event)}>
+                <i class="fas fa-trash-alt"></i></button>
         </form>
     </div>
     }

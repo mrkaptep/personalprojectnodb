@@ -3,8 +3,8 @@ const { v4: uuidv4 } = require('uuid');
 
 let chores = [{
     id: '1',
-    assignToName: 'sam',
-    choreName: 'sweep',
+    assignToName: 'Sam',
+    choreName: 'Sweep',
     choreType: 'weekly',
     choreAmount: '0',
     choreComplete: false
@@ -15,7 +15,7 @@ let chores = [{
     choreName: 'Mop Kitchen',
     choreType: 'saturday',
     choreAmount: '0',
-    choreComplete: false 
+    choreComplete: 'false' 
 },
 {
     id: '3',
@@ -23,7 +23,7 @@ let chores = [{
     choreName: 'Mow Lawn',
     choreType: 'money',
     choreAmount: '$1',
-    choreComplete: false
+    choreComplete: 'false'
 }
 
 ];
@@ -31,8 +31,8 @@ let chores = [{
 module.exports = {
 
     create: (req, res) => {
-        const{assignToName, choreName, choreType, choreAmount} = req.body;
-        let newChore = {id:uuidv4(), assignToName, choreName, choreType, choreAmount, choreComplete: false}
+        const{assignToName, choreName, choreType, choreAmount, choreComplete} = req.body;
+        let newChore = {id:uuidv4(), assignToName, choreName, choreType, choreAmount, choreComplete}
         chores.push(newChore);
 
         res.status(200).send(newChore);

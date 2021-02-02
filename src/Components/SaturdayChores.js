@@ -9,7 +9,13 @@ function SaturdayChores(props) {
                     <div key={index} className='saturdayChore'>
                         <button onClick={() => props.editChoreForm(chore)}><i class="fas fa-pencil-alt"></i></button>
                         <div className="assignName">{chore.assignToName}</div>
-                        <div className="choreName">{chore.choreName}</div>
+                        <div className={chore.choreComplete ? 'completedChore2' : 'choreName'}>{chore.choreName}</div>
+                        <div className='completeBox'>
+                            <button className="completeChore"
+                                onClick={() => props.updateChore({...chore, choreComplete:!chore.choreComplete})}>
+                                <i class="fas fa-check"></i>
+                            </button>
+                        </div>
                     </div>
                 ))}
             </div>
