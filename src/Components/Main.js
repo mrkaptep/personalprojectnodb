@@ -58,6 +58,11 @@ class Main extends Component{
        }).catch(err => console.log(err))
    }
  
+   cancel = ()=> {
+        this.setState({
+            editChore: null
+        })
+   }
    editChoreForm = chore => {
         this.setState({
             editChore: chore
@@ -79,33 +84,36 @@ class Main extends Component{
     render(){
       return (
         <div className="App">
-            <div className="headerBox">
-                <Header/>
-                <button onClick={( () => this.editChoreForm({choreType:'weekly'}))}>
-                    <i class="fas fa-plus-square"></i></button>
-            </div>
-            {this.state.editChore ? (
-                <Edit editChore={this.state.editChore}
+            <div className="contentContainer">
+                <div className="headerBox">
+                    <Header/>
+                    <button onClick={( () => this.editChoreForm({choreType:'weekly'}))}>
+                        <i class="fas fa-plus-square"></i></button>
+                </div>
+                {this.state.editChore ? (
+                    <Edit editChore={this.state.editChore}
                       createChore={this.createChore} 
                       editChoreForm={this.editChoreForm} 
                       updateChore={this.updateChore}
-                />
-                ):(
-                <React.Fragment>
-                    <WeeklyChores choreWeek={this.state.chores} 
-                                  editChoreForm={this.editChoreForm}
-                                  deleteChore={this.deleteChore}
+                      cancel={this.cancel}
                     />
-                    <SaturdayChores choreSaturday={this.state.chores}
-                                    editChoreForm={this.editChoreForm}
-                                    deleteChore={this.deleteChore}
+                    ):(
+                    <React.Fragment>
+                        <WeeklyChores choreWeek={this.state.chores} 
+                                      editChoreForm={this.editChoreForm}
+                                      deleteChore={this.deleteChore}
                     />
-                    <MoneyChores choreMoney={this.state.chores}
-                                 editChoreForm={this.editChoreForm}
-                                 deleteChore={this.deleteChore}
+                        <SaturdayChores choreSaturday={this.state.chores}
+                                        editChoreForm={this.editChoreForm}
+                                        deleteChore={this.deleteChore}
                     />
-                </React.Fragment>
-            )}
+                        <MoneyChores choreMoney={this.state.chores}
+                                     editChoreForm={this.editChoreForm}
+                                     deleteChore={this.deleteChore}
+                        />
+                    </React.Fragment>
+                )}
+            </div>
         </div>
       );
     }

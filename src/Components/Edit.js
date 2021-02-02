@@ -65,9 +65,11 @@ class Edit extends Component {
         })
     }
 
+    
     render(){
         return <div className="form-container">
 
+        
         <form className="editForm" onSubmit={(event) => this.handleSubmit(event)}>
             <input
                 onChange={event => this.handleChange(event)} 
@@ -101,6 +103,10 @@ class Edit extends Component {
                 type="text"
                 className="inputForm"/> 
             <button type="submit">Submit</button>
+            <button onClick={() => this.props.cancel()}
+                className="cancelButton">
+                <i class="fas fa-times"></i>
+            </button>
         </form>
     </div>
     }
