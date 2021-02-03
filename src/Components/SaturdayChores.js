@@ -7,7 +7,8 @@ function SaturdayChores(props) {
             <div className="satChoreBox">
             {props.choreSaturday.filter(chore => chore.choreType === 'saturday').map((chore, index) => (
                     <div key={index} className='saturdayChore'>
-                        <button onClick={() => props.editChoreForm(chore)}><i class="fas fa-pencil-alt"></i></button>
+                        <button className="editButton"
+                            onClick={() => props.editChoreForm(chore)}><i class="fas fa-pencil-alt"></i></button>
                         <div className="assignName">{chore.assignToName}</div>
                         <div className={chore.choreComplete ? 'completedChore2' : 'choreName'}>{chore.choreName}</div>
                         <div className='completeBox'>

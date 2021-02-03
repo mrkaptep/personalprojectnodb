@@ -9,7 +9,8 @@ function WeeklyChores(props) {
                 {props.choreWeek.filter(chore => chore.choreType === 'weekly').map((chore, index) => (
                     <div key={index} className="weeklyChore">
                         {console.log(chore.choreName, chore.choreComplete)}
-                        <button onClick={() => props.editChoreForm(chore)}>
+                        <button className="editButton"
+                            onClick={() => props.editChoreForm(chore)}>
                             <i class="fas fa-pencil-alt"></i></button>
                         <div className="assignName ">{chore.assignToName}</div>
                         <div className={chore.choreComplete ? 'completedChore1' : 'choreName'}>{chore.choreName}</div>

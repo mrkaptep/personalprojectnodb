@@ -90,7 +90,8 @@ class Main extends Component{
             <div className="contentContainer">
                 <div className="headerBox">
                     <Header/>
-                    <button onClick={( () => this.editChoreForm({choreType:'weekly'}))}>
+                    <button className="headerButton"
+                        onClick={( () => this.editChoreForm({choreType:'weekly'}))}>
                         <i class="fas fa-plus-square"></i></button>
                 </div>
                 {this.state.editChore ? (

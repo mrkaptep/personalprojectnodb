@@ -9,7 +9,7 @@ body {
 
 
 .completeBox {
-  width: 10px;
+  width: 23px;
 }
 
 .headerBox {
@@ -41,6 +41,18 @@ body {
   border: none;
   margin-left: 5px;
   color: white;
+}
+
+.headerButton:hover {
+  color: black;
+}
+
+.editButton:hover {
+  color: black;
+}
+
+.completeChore:hover {
+  color: black;
 }
 
 .contentContainer {
@@ -114,7 +126,8 @@ body {
 }
 
 .choreName {
-  width: 300px;
+  width: 290px;
+  flex: 1 1 auto;
 
 }
 
@@ -123,13 +136,15 @@ body {
   text-decoration-color: #51c2d5;
   text-decoration-thickness: 5px;
   width: 300px;
+  flex: 1 1 auto;
 }
 
 .completedChore2 {
   text-decoration: line-through;
   text-decoration-color: #D551D3;
   text-decoration-thickness: 5px;
-  width: 300px;
+  width: 285px;
+  flex: 1 1 auto;
 }
 
 
@@ -292,6 +307,7 @@ body {
 
 .choreName2 {
   width: 266px;
+  flex: 1 1 auto;
   margin-right: 4px;
 
 }
@@ -306,5 +322,6 @@ body {
   text-decoration: line-through;
   text-decoration-color: #7AD551;
   text-decoration-thickness: 5px;
+  flex: 1 1 auto;
   width: 270px;
 }

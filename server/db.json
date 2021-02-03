@@ -1,0 +1,48 @@
+{
+  "chores": [
+    {
+      "id": "1",
+      "assignToName": "Sam",
+      "choreName": "Sweep",
+      "choreType": "weekly",
+      "choreAmount": "0",
+      "choreComplete": false
+    },
+    {
+      "id": "2",
+      "assignToName": "Sam",
+      "choreName": "Mop Kitchen",
+      "choreType": "saturday",
+      "choreAmount": "0",
+      "choreComplete": false
+    },
+    {
+      "id": "3",
+      "assignToName": "Mason",
+      "choreName": "Mow Lawn",
+      "choreType": "money",
+      "choreAmount": "$1",
+      "choreComplete": false
+    },
+    {
+      "id": "8c5cafa0-87fb-4832-bcae-34121001f055",
+      "assignToName": "Jeff",
+      "choreName": "mop",
+      "choreType": "weekly",
+      "choreComplete": false
+    },
+    {
+      "id": "6b73cd4a-938a-4f53-9ef3-df1202634ab5",
+      "assignToName": "Will",
+      "choreName": "Zone 1",
+      "choreType": "saturday",
+      "choreComplete": false
+    },
+    {
+      "id": "d98cc015-798b-4ffb-a0aa-1e44b861e9d9",
+      "assignToName": "Lisa",
+      "choreName": "Zone 2",
+      "choreType": "saturday"
+    }
+  ]
+}

@@ -7,7 +7,8 @@ function MoneyChores(props) {
                 <div className="moneyChoreBox">
                     {props.choreMoney.filter(chore => chore.choreType === 'money').map((chore, index) => (
                     <div key={index} className='moneyChore'>
-                        <button onClick={() => props.editChoreForm(chore)}><i class="fas fa-pencil-alt"></i></button>
+                        <button className="editButton"
+                            onClick={() => props.editChoreForm(chore)}><i class="fas fa-pencil-alt"></i></button>
                         <div className="assignName2">{chore.assignToName}</div>
                         <div className={chore.choreComplete ? 'completedChore3' : 'choreName2'}>{chore.choreName}</div>
                         <div className="choreAmount">{chore.choreAmount}</div>

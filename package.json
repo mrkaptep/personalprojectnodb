@@ -12,6 +12,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
+    "heartbeat": "0.0.2",
+    "heartbeats": "^5.0.1",
     "lowdb": "^1.0.0",
     "morgan": "^1.10.0",
     "react": "^17.0.1",
